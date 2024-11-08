@@ -8,7 +8,7 @@ from typing import Dict, List, Optional, Tuple
 from torch._export.serde.union import _Union
 
 # NOTE: Please update this value if any modifications are made to the schema
-SCHEMA_VERSION = (8, 1)
+SCHEMA_VERSION = (8, 2)
 TREESPEC_VERSION = 1
 
 
@@ -62,6 +62,21 @@ class SymExprHint(_Union):
     as_bool: bool
 
 
+@dataclass(repr=False)
+class SymBase(_Union):
+    as_bool: bool
+    as_float: float
+    as_int: int
+    as_symbol: str
+
+
+@dataclass(repr=False)
+class SymExprNode:
+    args: List["SymExprNode"] = field(default_factory=list)
+    target: Optional[str] = None
+    base: Optional[SymBase] = None
+
+
 # This is for storing the symbolic expressions behind symints/symfloats/symbools
 # For example, we can get something like
 # SymExpr(expr_str="s0 + s1", hint=SymExprHint(as_int=4)
@@ -69,6 +84,7 @@ class SymExprHint(_Union):
 @dataclass
 class SymExpr:
     expr_str: str
+    expr_ast: Optional[SymExprNode] = None
     hint: Optional[SymExprHint] = None
 
 
