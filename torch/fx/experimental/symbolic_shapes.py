@@ -145,6 +145,7 @@ __all__ = [
     "SHAPEENV_EVENT_KEY",
     "CURRENT_NODE_KEY",
     "has_free_symbols",
+    "has_free_unbacked_symbols",
     "sym_eq",
     "SymbolicContext",
     "StatelessSymbolicContext",
@@ -770,6 +771,14 @@ def free_symbols(val: IterateExprs) -> OrderedSet[sympy.Symbol]:
 def has_free_symbols(val: IterateExprs) -> bool:
     """Faster version of bool(free_symbols(val))"""
     return not all(e.is_number for e in _iterate_exprs(val))
+
+
+def has_free_unbacked_symbols(x: IterateExprs) -> bool:
+    """Faster version of bool(free_unbacked_symbols(val))"""
+    for s in free_symbols(x):
+        if symbol_is_type(s, (SymT.UNBACKED_INT, SymT.UNBACKED_FLOAT)):
+            return True
+    return False
 
 
 # Like free_symbols, but filtered to only report unbacked symbols

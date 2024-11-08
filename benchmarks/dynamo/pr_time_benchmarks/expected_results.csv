@@ -1,8 +1,8 @@
-add_loop_eager,compile_time_instruction_count,3073000000,0.015
+add_loop_eager,compile_time_instruction_count,3027000000,0.015
 
 
 
-add_loop_eager_dynamic,compile_time_instruction_count,5700000000,0.025
+add_loop_eager_dynamic,compile_time_instruction_count,5616000000,0.025
 
 
 
@@ -10,15 +10,15 @@ add_loop_inductor,compile_time_instruction_count,24580000000,0.015
 
 
 
-add_loop_inductor_dynamic_gpu,compile_time_instruction_count,40810000000,0.025
+add_loop_inductor_dynamic_gpu,compile_time_instruction_count,40730000000,0.025
 
 
 
-add_loop_inductor_gpu,compile_time_instruction_count,23290000000,0.015
+add_loop_inductor_gpu,compile_time_instruction_count,23300000000,0.015
 
 
 
-basic_modules_ListOfLinears_eager,compile_time_instruction_count,1037000000,0.015
+basic_modules_ListOfLinears_eager,compile_time_instruction_count,1036000000,0.015
 
 
 
@@ -30,19 +30,19 @@ basic_modules_ListOfLinears_inductor_gpu_force_shape_pad,compile_time_instructio
 
 
 
-basic_modules_ListOfLinears_inductor_gpu,compile_time_instruction_count,16890000000,0.2
+basic_modules_ListOfLinears_inductor_gpu,compile_time_instruction_count,16490000000,0.2
 
 
 
-update_hint_regression,compile_time_instruction_count,1757000000,0.02
+update_hint_regression,compile_time_instruction_count,1696000000,0.02
 
 
 
-sum_floordiv_regression,compile_time_instruction_count,1171000000,0.015
+sum_floordiv_regression,compile_time_instruction_count,1096000000,0.015
 
 
 
-symint_sum,compile_time_instruction_count,3321000000,0.015
+symint_sum,compile_time_instruction_count,3295000000,0.015
 
 
 
@@ -50,7 +50,7 @@ aotdispatcher_inference_nosubclass_cpu,compile_time_instruction_count,2014000000
 
 
 
-aotdispatcher_inference_subclass_cpu,compile_time_instruction_count,5826000000,0.015
+aotdispatcher_inference_subclass_cpu,compile_time_instruction_count,5777000000,0.015
 
 
 
@@ -58,8 +58,8 @@ aotdispatcher_partitioner_cpu,compile_time_instruction_count,9022000000,0.015
 
 
 
-aotdispatcher_training_nosubclass_cpu,compile_time_instruction_count,3848000000,0.015
+aotdispatcher_training_nosubclass_cpu,compile_time_instruction_count,3830000000,0.015
 
 
 
-aotdispatcher_training_subclass_cpu,compile_time_instruction_count,10330000000,0.015
+aotdispatcher_training_subclass_cpu,compile_time_instruction_count,10280000000,0.015
